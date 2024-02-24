@@ -467,4 +467,31 @@ const alpha = (str) =>
 str.split('').sort((a,b) => a > b ? 1 : -1).join('');
 console.log(alpha("javascript"))
 
+
+//Define an object named person with the following properties:
+// name (string) - representing the person's name.
+// age (number) - representing the person's age.
+// isStudent (boolean) - representing whether the person is a student or not.
+// hobbies (array) - representing an array of the person's hobbies.
+// Create the object and set some values for each property. Then, log the entire object to the console.
+
  
+const Stu = {
+    name : 'Isszo',
+    age : 23,
+    isStudent : true,
+    hobbies : ['cricket', 'football'],
+
+}
+console.log(Stu);
+
+// Object Manipulation:
+// Add a new property city to the Stu object and set its value to the city where the person lives.
+// Update the age property to reflect the person's current age.
+// Log the modified Stu object to the console.
+ 
+Stu.city = 'Tokyo';
+Stu.age = 25;
+console.log(Stu)
+
+
