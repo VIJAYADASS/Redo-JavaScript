@@ -596,3 +596,41 @@ const bookObject = {
 printBookInfo(bookObject);
 
 
+// Task: Swap Object Properties
+// Write a function called swapProperties that takes an object 
+//with properties a and b and swaps their values using object destructuring.
+// Test your function with different objects.
+
+function swapProperties(obj) {
+     
+    const { a, b } = obj;
+    const updatedObj = { a: b, b: a };
+
+    return updatedObj;
+}
+const sampleObject = { a: 5, b: 10 };
+const swappedObject = swapProperties(sampleObject);
+
+console.log(swappedObject);
+
+
+// Task: Extract Nested Object Properties
+// Given a nested object representing a person's details, 
+//write a function called printPersonDetails that takes 
+//the person object as a parameter and uses object destructuring to extract and print the person's name, age, and city.
+// Test your function with different nested person objects.
+
+const nested = {
+    firstName : 'Tom',
+    lastName : 'Lotham',
+    person : {
+        name : 'David',
+        age : 12,
+        city : 'Austraila'
+    }
+};
+const {person : {name, age, city}} = nested;
+console.log( `Name : ${name}`)
+console.log(`Age : ${age}`)
+console.log( `city :${city}`)
+ 
