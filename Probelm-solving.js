@@ -574,3 +574,25 @@ console.log(welcomeMessage);
 
 
 
+// Task: Extract Information from an Object
+// Given an object representing a book, write a function called printBookInfo 
+//that takes the book object as a parameter and
+// uses object destructuring to extract and print the book's title, author, and year of publication.
+// Test your function with different book objects.
+
+function printBookInfo(book){
+    
+    const { title, author, yearOfPublication } = book;
+ 
+    console.log(`Title: ${title}`);
+    console.log(`Author: ${author}`);
+    console.log(`Year of Publication: ${yearOfPublication}`);
+};
+const bookObject = {
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    yearOfPublication: 1925
+};
+printBookInfo(bookObject);
+
+
