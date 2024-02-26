@@ -495,3 +495,82 @@ Stu.age = 25;
 console.log(Stu)
 
 
+
+// Write a function called filterStudents that takes an array of students
+// and returns a new array containing only the students who are students (where isStudent is true).
+// Log the result to the console.
+// Call the function with the students array.
+
+const students = [
+    { name: 'Alice', age: 20, isStudent: true, hobbies: ['reading', 'painting'], city: 'New York' },
+    { name: 'Bob', age: 22, isStudent: false, hobbies: ['gaming', 'coding'], city: 'San Francisco' },
+    { name: 'Charlie', age: 21, isStudent: true, hobbies: ['music', 'photography'], city: 'Los Angeles' }
+];
+
+function filterStudents(StuArr){
+    return  StuArr.filter(students => students.isStudent === false);
+}
+const New = filterStudents(students);
+console.log(New);
+
+
+// Write a function called updateStudent that takes an object representing a student, 
+// and updates the isStudent property to false. Log the modified object to the console.
+// Call the function with the Stu object.
+
+const Stu = {
+    name: 'Isszo',
+    age: 25,
+    isStudent: true,
+    hobbies: ['cricket', 'football'],
+    city: 'Tokyo',
+}
+
+function updateStudent(student){
+    student.isStudent =false;
+    console.log(student)
+}
+updateStudent(Stu)
+
+
+//Task: Extract Specific Elements
+//Given an array of strings, write a function called extractElement
+//that takes the array and returns a new array containing only
+// the elements that start with the letter 'A'.
+
+function extractElements(stringsArray) {
+    const filteredArray = stringsArray.filter(str => str.startsWith('A'));
+    return filteredArray;
+}
+const array1 = ['Apple', 'Banana', 'Orange', 'Avocado', 'Grapes'];
+console.log(extractElements(array1)); 
+
+
+// Given an array of numbers, write a function called manipulateArray that performs
+//the following operations and returns the modified array:
+// Remove the last element from the array.
+// Add a new element with the value 10 to the beginning of the array.
+// Double the value of each element in the array.
+
+function manipulateArray(){
+    const task = [23, 58, 96, 45, 12];
+    task.pop();
+    task.unshift(10)
+    const doubleArr = task.map(num => num * 2)
+    return doubleArr;
+}
+console.log(manipulateArray());
+
+
+// Task: Template literals
+// Create a welcome message that includes the user's 
+//name and the current year using template literals.
+
+const userName = "Alice";
+const currentYear = 2024;
+
+const welcomeMessage = `Welcome, ${userName}! We hope you have a fantastic ${currentYear}.`;
+console.log(welcomeMessage);
+
+
+
