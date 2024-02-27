@@ -633,4 +633,40 @@ const {person : {name, age, city}} = nested;
 console.log( `Name : ${name}`)
 console.log(`Age : ${age}`)
 console.log( `city :${city}`)
+
+
+// Task: Extract Array Elements from an Object
+// Given an object with an array property, write a function called printArrayElements that takes the object as a parameter and uses object destructuring to extract and print each element of the array.
+// Test your function with different objects having an array property.
+
+function printArrayElements(obj) {
+    const [{ name, type }] = obj;
+    
+    console.log(`Name: ${name}`);
+    console.log(`Type: ${type}`);
+}
+const obj1 = [{ name: 'Bovonto', type: 'juice' }];
+const obj2 = [{ name: 'Apple', type: 'fruit' }];
+
+printArrayElements(obj1);
+printArrayElements(obj2);
+
+
+// Task: Hoisting Exploration
+// Write a function called hoistingExample that includes a variable declaration, a function declaration, and a function expression.
+// Inside the function, try to log the values of the variables before and after their declaration.
+// Call the function and observe the outputs.
+// Explain the concept of hoisting based on your observations.
+
+ 
+hoistingExample();
+
+function hoistingExample(){
+    console.log("Hello wrold")
+}
+
+
+console.log("Before declaration : ", a);
+var a = 5;
+console.log("After declaration : ", a);
  
