@@ -720,3 +720,16 @@ function Employee(name, age){
 let Person1 = new Employee('John', 20);
 
 console.log( `Name :  ${Person1.name},  Age : ${Person1.age}`)
+
+
+
+// Call the processArray function with the numbers array.
+
+ function processArray(numbers) {
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+            
+        }
+}
+const myNumbers = [2, 5, 7, 9, 20, 29];
+processArray(myNumbers)
