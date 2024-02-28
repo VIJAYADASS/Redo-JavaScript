@@ -669,4 +669,40 @@ function hoistingExample(){
 console.log("Before declaration : ", a);
 var a = 5;
 console.log("After declaration : ", a);
- 
+
+
+// Create an object named car with the following properties:
+// brand (string): representing the brand of the car.
+// speed (number): representing the current speed of the car.
+// accelerate (method): a function that increases the speed of the car by 10 units.
+// brake (method): a function that decreases the speed of the car by 5 units.
+
+const car = {
+    brand : 'Thar',
+    Speed : 180,
+    accelerate : function(){
+        this.Speed += 10;
+        console.log(`Accelerated! Current Speed: ${this.Speed}`)
+    },
+    brake : function(){
+        this.Speed -= 5;
+        console.log(`Braked! Current Speed:${this.Speed}` )
+    },
+    Mahendra : function(){
+        console.log( `Brand: ${this.brand}, Current Speed: ${this.Speed}`)
+    }
+};
+ car.Mahendra() ;
+ car.brake() ;
+ car.accelerate();
+
+
+ // Task: this in Event Handlers
+// Create an HTML button with the id "myButton".
+// In your JavaScript, select the button using document.getElementById and attach a click event handler to it.
+// Inside the event handler, use the this keyword to refer to the button and change its text content to "Clicked!" when it's clicked.
+
+let element = document.getElementById('myButton');
+element.addEventListener('click', function() {
+    this.textContent = 'Clicked!';
+});
