@@ -706,3 +706,17 @@ let element = document.getElementById('myButton');
 element.addEventListener('click', function() {
     this.textContent = 'Clicked!';
 });
+
+
+// Task: this in Constructor Functions
+// Create a constructor function named Person that takes parameters name and age.
+// Inside the constructor function, assign name and age to properties of the object using this.
+// Create an instance of Person and log the object properties.
+
+function Employee(name, age){
+    this.name = name,
+    this.age = age
+}
+let Person1 = new Employee('John', 20);
+
+console.log( `Name :  ${Person1.name},  Age : ${Person1.age}`)
