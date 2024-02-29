@@ -732,4 +732,99 @@ console.log( `Name :  ${Person1.name},  Age : ${Person1.age}`)
         }
 }
 const myNumbers = [2, 5, 7, 9, 20, 29];
-processArray(myNumbers)
+processArray(myNumbers) 
+
+
+// Arrays:
+// Task: Create an array named fruits containing the names of your favorite fruits. Add a new fruit to the array and then log the array to the console.
+ 
+const  fruitsName = ['apple', 'mango', 'strawberry','waterlemon']
+
+ fruitsName.push('banana')
+ console.log(fruitsName)
+
+
+//Task: Create an object named person with properties name, age, and gender. Fill in the values for a fictional person and log the object to the console.
+
+const id = {
+    name : 'alexa',
+    age : 39,
+    gender : 'Female'
+}
+console.log(id)
+
+
+//Task: Write a function named hoistingExample that includes both function declaration and variable declaration. Call the function before the actual declarations in the code and observe the behavior.
+
+hoistingEg()
+// console.log(x) // variable declaration
+function hoistingEg(){
+    let x = 10;
+    console.log(x) //function declaration
+}
+
+
+//Task: Write a function named multiply that takes two parameters and returns their product. Call the function with two different sets of numbers and log the results.
+
+function multiply(p1, p2){
+    return p1 * p2
+}
+console.log(multiply(23, 3))
+
+
+//Task: Implement a simple if-else statement. Check if a variable number is even or odd, then log a message accordingly.
+
+let i = 1
+if ( i % 2 !== 0) {
+    console.log('Odd')
+} else {
+    console.log('Even')
+}
+
+
+// Task: Use a loop to iterate through the fruits array from task 1. Log each fruit to the console during the iteration.
+
+for (let  i = 0;   i < fruits.length;  i++) {
+    console.log( i)
+}
+
+
+
+//Task: Declare a variable named temperature and assign it a value. Use a conditional statement to log whether it's hot or cold based on the value.
+
+let temperature = 100
+if ( temperature > 90 ) {
+    console.log( 'The whether is hot')
+} else{
+    console.log('The whether is cold')
+}
+
+
+//Template Literals:
+// Task: Create a template literal to generate a sentence using the name and age properties from the person object in task 2. Log the generated sentence to the console.
+
+console.log(`my Name is ${id.name} and my age is ${id.age}`)
+
+
+//Task: Declare variables with different data types (string, number, boolean, array, object) and log their types to the console.
+
+let property = 'Javascript'
+console.log(typeof property) //String
+let N = 2
+console.log(typeof N) //number
+let Bool = true
+console.log(typeof Bool)//boolean
+let Ob = { a : 'Javascript'}
+console.log(typeof Ob)//object
+let Ar = []
+console.log(typeof Ar)//Array
+
+
+//Task: Use arithmetic operators to perform calculations (addition, subtraction, multiplication, division) on two variables and log the results.
+
+let A = 5, B = 20
+console.log('Addition :', A + B, 
+' Subract:', A - B, 
+' Multiply:', A * B, 
+' Div:', A / B)
+ 
