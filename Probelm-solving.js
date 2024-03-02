@@ -827,4 +827,108 @@ console.log('Addition :', A + B,
 ' Subract:', A - B, 
 ' Multiply:', A * B, 
 ' Div:', A / B)
+
+
+//Arrays:
+// Task: Declare an array named numbers containing a mix of both odd and even numbers. Write a function named filterEvenNumbers that takes this array as a parameter and returns a new array containing only the even numbers.
+
+function filterEvenNumbers(num){
+    const Even = num.filter(Number => Number % 2 === 0)
+        console.log(Even)
+    
+        return Even;
+    }
+    filterEvenNumbers( [2, 5, 11, 12, 16, 19])
+
+
+// Task: Create an object named car with properties such as brand, model, and year. Write a function named printCarInfo that takes this object as a parameter and prints a sentence using template literals to display the car information.
+
+const Car = {
+    brand : 'Swift',
+    model :' mid-varient',
+    year : 2021
+};
+
+function printCarInfo(Car){
+    
+    console.log(`The car is ${Car.brand}, the model is${Car.model} is, and it was manufactured in ${Car.year}.`)
+}
+  printCarInfo(Car);
+
+
+// Functions and Control Statements:
+// Task: Write a function named calculateGrade that takes a student's score as a parameter and returns their corresponding grade (A, B, C, D, or F). Use control statements (if-else or switch) to determine the grade based on score ranges.
+
+function calculateGrade(score) {
+    let grade;
+    
+    if (score >= 90) {
+        grade = 'A';
+    } else if (score >= 80) {
+        grade = 'B';
+    } else if (score >= 70) {
+        grade = 'C';
+    } else if (score >= 60) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+    console.log(`The grade is: ${grade}`);
+}
+calculateGrade(5);
+
+
+//Loops:
+//Task: Declare an array of strings named fruits and use a loop (for or while) to iterate through the array and print each fruit to the console in reverse order.
+
+const Vegetable = ['Carrot', 'beetroot', 'pumkin', 'potato', 'tomato' ]
+
+Vegetable.reverse('')
+for (let  i = 0;  i < Vegetable.length; i++) {
+    console.log(Vegetable[i])
+}
+
+
+//Variables:
+//Task: Declare a variable named userName and initialize it with your name. Write an if-else statement to check if the length of the name is greater than 10 characters. If true, log "Long name!" to the console; otherwise, log "Short name!".
+
+let yourName = 'Front-end developer'
+ 
+if ( yourName.length >= 10 ) {
+    console.log(`It's Long name!`)
+} else {
+    console.log(`It's short name!`)
+}
+
+
+// Template Literals:
+// Task: Create an object named book with properties like title and author. Write a function named displayBookInfo that takes this object as a parameter and uses template literals to log a sentence with the book information.
+
+const Stationery = {
+    title : 'Harry Potter',
+    author : 'J. K. Rowling'
+}
+
+console.log(`The name of the title is ${Stationery.title} and the author name is ${Stationery.author}`)
+
+
+// Data Types:
+// Task: Declare a variable named mixedData and assign it an array containing a mix of data types (string, number, boolean, object). Write a function named logDataTypes that takes this array as a parameter and logs the data type of each element.
+
+function logDataTypes(mixedData){
+
+    for (let i = 0; i < mixedData.length; i++) {
+        console.log(`Data type of element at index ${i} is: ${typeof mixedData[i]}`);
+    }
+}
+const mixedData = ['Front-end', 12, true, { code: 'javascript' }];
+logDataTypes(mixedData);
+
+
+// Operators:
+// Task: Declare two variables x and y with numerical values. Use the conditional (ternary) operator to check if x is greater than y. If true, log "x is greater"; otherwise, log "y is greater".
+
+let x = 10, y = 5;
+
+console.log(x > y  ? 'x is greater than y' : 'y is greater than x')
  
