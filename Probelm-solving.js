@@ -931,4 +931,76 @@ logDataTypes(mixedData);
 let x = 10, y = 5;
 
 console.log(x > y  ? 'x is greater than y' : 'y is greater than x')
- 
+
+
+// Arrays:
+// Task: Declare an array named grades containing numerical values representing student grades. Write a function named calculateAverage that takes this array as a parameter and returns the average grade.
+
+function calculateAverage(grades){
+
+    let sum = 0
+
+    for (let i = 0; i < grades.length; i++) {
+        console.log(grades[i]);
+        sum += grades[i];
+        
+    }
+    const average = sum / grades.length;
+     
+    return average
+     
+}
+console.log( calculateAverage([86, 75, 54, 49, 60]))
+
+
+// Objects:
+// Task: Create an object named movie with properties like title, year, and director. Write a function named printMovieDetails that takes this object as a parameter and uses template literals to log a sentence with the movie information.
+
+const movie = {
+    title : 'Sachin',
+    year : 2005,
+    director : 'John Mahendran'
+}
+
+function printMovieDetails(movie){
+    console.log( `The movie name is ${movie.title} and the year was released on ${movie.year} and director was ${movie.director}`)
+}
+ printMovieDetails(movie) 
+
+
+// Functions and Control Statements:
+// Task: Write a function named checkVowel that takes a character as a parameter and checks if it's a vowel. Use a switch statement to handle different vowel cases. Log "Vowel" if it's a vowel; otherwise, log "Not a vowel".
+
+function checkVowel(character){
+    switch (character.toLowerCase()) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            console.log('Vowel');
+            break;
+        default:
+            console.log('Not a vowel');
+            break;
+    }
+}
+checkVowel('A')
+
+
+// Loops:
+// Task: Declare an array of objects named employees, where each object represents an employee with properties like name and salary. Write a function named logSalaries that takes this array as a parameter and logs the name and salary of each employee using a loop.
+
+const employees = [
+     Employee = {
+        name : 'Vj',
+        salary : '3L'
+     }
+]
+
+function logSalaries(employees){
+    employees.forEach(employee => {
+        console.log(`Name: ${employee.name}, Salary: ${employee.salary}`)
+    });
+}
+logSalaries(employees)
