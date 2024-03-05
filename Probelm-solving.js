@@ -1004,3 +1004,48 @@ function logSalaries(employees){
     });
 }
 logSalaries(employees)
+
+
+// Variables:
+// Task: Declare a variable named counter and initialize it with 0. Write a function named incrementCounter that takes no parameters and increments the counter by 1. Call this function multiple times and log the counter value after each call.
+
+var counter = 0
+function incrementCounter(){
+
+    counter += 1;
+    
+}
+console.log(counter)
+incrementCounter()
+
+
+// Template Literals:
+// Task: Create an object named city with properties like name, population, and country. Write a function named displayCityInfo that takes this object as a parameter and uses template literals to log a sentence with the city information.
+ 
+function displayCityInfo(city){
+    
+    console.log(`Located in ${city.country}, ${city.name} is a vibrant city with a population exceeding ${city.population} people, making it a bustling and diverse urban center.`
+         
+    )
+     
+}
+displayCityInfo({
+    name : 'Alexa',
+    population : '1M-plus',
+    country : 'India'
+})
+
+
+// Operators:
+// Task: Declare two variables num1 and num2 with numerical values. Use various comparison operators to check if num1 is equal to, greater than, or less than num2. Log the results to the console.
+
+let num1 = 5 , num2 = 6
+if (num1 === num2) {
+    console.log('num1 is equal to num2')
+} else if(num1 > num2 ){
+    console.log('num1 is greater than num2 ')
+}else{
+    console.log('num1 is less than num2')
+} 
+
+
