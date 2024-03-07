@@ -1049,3 +1049,13 @@ if (num1 === num2) {
 } 
 
 
+
+//Create an HTML button with the text "Click me!" and an ID of "myButton". Add an event listener and an event handler in JavaScript so that when the button is clicked, it logs a message to the console, such as "Button clicked!".
+
+let btn =document.getElementById('myButton')
+console.log(btn);
+
+btn.addEventListener('click', function(){
+    console.log('button Clicked!')
+})
+
