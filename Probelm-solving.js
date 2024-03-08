@@ -1120,3 +1120,30 @@ const uDetails = { ...P, favoriteFruits: [...F] };
 const completeDetails = { ...uDetails, ...address };
 
 console.log(completeDetails)
+
+
+// Task: Rest operator
+// Declare a function named calculateSum that takes the first two arguments as regular parameters and uses the rest operator to collect any additional numbers. Calculate and return the sum of all numbers, including the first two
+let sum = 0
+function calculateSum(first, second, ...rest){
+    sum = first + second;
+    for (let i = 0; i < rest.length; i++) {
+        sum = sum + rest[i];
+        
+    }
+    console.log("First:", first);
+  console.log("Second:", second);
+  console.log("Rest:", rest);
+  console.log("Sum:", sum);
+}
+calculateSum(10, 20, 30, 40)
+
+
+ 
+// Task: Rest operator
+// Create a function called mergeArrays that takes two arrays as parameters and uses the rest operator to merge them into a new array. The function should return the merged array.
+function mergeArrays(arr1, arr2){
+    const mergedArray = [...arr1,...arr2]
+    console.log(mergedArray)
+}
+mergeArrays([1,2,3], ['a', 'b', 'c'])
