@@ -1092,3 +1092,31 @@ const numerical = [2, 76, 35]
 const additionalNumbers = [81, 15, 71]
 const combinedNumbers = [56, 23, 65, ...numerical, ...additionalNumbers]
 console.log(combinedNumbers)
+
+
+// Create an object named userDetails with properties name, age, and country. Create another object named updateDetails with properties age and city. Use the spread operator to create a new object named updatedUser that includes all the properties from both objects. Additionally, override the age property with the value from updateDetails.
+
+const userDetails ={
+    name : 'John',
+    age : 23,
+    country : 'India'
+};
+const updateDetails = {
+     age :  34,
+     city : 'Tiruvananthapuram'
+}
+ 
+const updatedUser = {...userDetails, ...updateDetails}
+console.log( updatedUser)
+
+
+// Create an array named fruits containing three fruit names. Create an object named person with properties name and age. Create another object named address with properties city and country. Use the spread operator to create a new object named userDetails that includes properties from both person and address. Then, create a new object named completeDetails that includes properties from both userDetails and an additional property favoriteFruits which should contain all the fruits from the fruits array
+
+const F = ['apple', 'banana', 'orange'];
+const P = { name: 'Alice', age: 28 };
+const address = { city: 'New York', country: 'USA' };
+
+const uDetails = { ...P, favoriteFruits: [...F] };
+const completeDetails = { ...uDetails, ...address };
+
+console.log(completeDetails)
