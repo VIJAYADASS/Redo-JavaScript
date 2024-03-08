@@ -1059,3 +1059,36 @@ btn.addEventListener('click', function(){
     console.log('button Clicked!')
 })
 
+
+//Task: Using the Spread Operator
+// Create an array named fruits containing three different fruit names. Create another array named moreFruits containing two additional fruit names. Use the spread operator to create a new array named combinedFruits that includes all the fruit names from both arrays.
+
+const F1 = ['Mango', 'pappaya', 'waterlemon']
+const moreFruits = ['Pineapple', 'jackfruit']
+
+const combinedFruits =  [...F1,...moreFruits];
+console.log(combinedFruits)
+
+
+// Task: Using the Spread Operator in Object Creation
+// Create an object named person1 with properties name and age. Create another object named person2 with properties city and country. Use the spread operator to create a new object named combinedPerson that includes all the properties from both objects.
+
+const person1 = {
+    name: 'Jack',
+    age : '21'
+};
+const person2 = {
+    country : 'India',
+    city : 'Tiruvananthapuram'
+}
+
+const combinedPerson = {...person1, ...person2}
+console.log(combinedPerson)
+
+
+// Create an array named numbers containing three numbers. Create another array named additionalNumbers containing two additional numbers. Use the spread operator to create a new array named combinedNumbers that includes all the numbers from both arrays. Then, add two more numbers at the beginning of combinedNumbers.
+
+const numerical = [2, 76, 35]
+const additionalNumbers = [81, 15, 71]
+const combinedNumbers = [56, 23, 65, ...numerical, ...additionalNumbers]
+console.log(combinedNumbers)
