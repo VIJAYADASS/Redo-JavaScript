@@ -1147,3 +1147,37 @@ function mergeArrays(arr1, arr2){
     console.log(mergedArray)
 }
 mergeArrays([1,2,3], ['a', 'b', 'c'])
+
+
+//Error Handling: 
+let value = prompt('enter the postive numbers');
+try {
+    if (isNaN(value)) {
+        throw new Error('Please enter the only numbers')
+    } else if(value < 0){
+        throw new Error('Please enter the only positive numbers')
+    } else{
+       console.log ('given a value is' , value)
+    }
+} catch (error) {
+    console.log(error.message)
+}
+
+//Create the function named myblock and parameters take the 'a' and 'b' and execute the try-catch block statement.
+
+function myblock(a, b){
+    try {
+        if(a == undefined || b == undefined){
+            throw new Error('Invalid')
+        } else{
+            let outupt  = a + b;
+            console.log(outupt)
+        }
+    } catch (error) {
+       console.log( error.message)
+    }
+    finally{
+        console.log('The program was executed successfully')
+    }
+}
+myblock(8,2);
