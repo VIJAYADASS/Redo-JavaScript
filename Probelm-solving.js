@@ -1181,3 +1181,15 @@ function myblock(a, b){
     }
 }
 myblock(8,2);
+
+
+// Task Description:
+// Create a function called calculateSumAndProduct that takes an array of numbers as its parameter. Inside the function, use the rest operator to collect all the numbers into a single array variable. Then, use the spread operator to calculate the sum and product of all the numbers in the array. Return an object containing the sum and product.
+ 
+function calculateSumAndProduct(...array){
+    const sum = array.reduce((acc, curr) => acc + curr, 0);
+    const product = array.reduce((acc, curr) => acc * curr, 1);
+  
+    return { sum, product };
+}
+console.log(calculateSumAndProduct(1,2,3,4,5))
