@@ -1302,6 +1302,20 @@ const unique = duplicate.filter((item, index) => {
 console.log(unique);
 
 
+//Count of each character in string
+const isCount =  [ 'Msd', 'sachin', 'Virat'];
+const combiningStr = isCount.join('');
+
+const characteredCount = {};
+
+for (let char of combiningStr) {
+    characteredCount[char] = (characteredCount[char] || 0) + 1;
+}
+//Additionaly the total character of string
+characteredCount.total = combiningStr.length;
+console.log(characteredCount )
+
+
 //Js program to check if the given number is a odd or even number.
 let i = 7
 if (i % 2 !== 0) {
@@ -1321,3 +1335,33 @@ console.log('Reverse number is:', Reversed)
 const digit = ['1234567890']
 const counted = digit.toString().length
 console.log(counted)
+
+
+//Reverse each word in the given string
+const ReverseStr =  [ 'Msd', 'sachin', 'Virat'];
+
+const reversedWord = ReverseStr.map(word => {
+    return word.split('').reverse('').join('');
+})
+const reversedString = reversedWord.join('')
+console.log( reversedString)
+
+//Reverse the array
+const  cricket = ['Msd', 'sachin', 'Virat'];
+
+const reversedArray = cricket.reverse();
+console.log(reversedArray);
+
+//Sum of digits
+const Value = [1,2,3,4,5]
+const sumofDigit = Value.reduce((acc, num) => 
+    acc + num, 0)
+console.log(sumofDigit)
+
+
+//First occurrence in a string
+const str = 'Hello world'
+const char = 'w';
+
+const firstOccurrance = str.indexOf(char)
+console.log(firstOccurrance)
