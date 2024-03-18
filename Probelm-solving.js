@@ -1262,8 +1262,6 @@ console.log(isPrime(12)); // Output: false
 console.log(isPrime(1)); // Output: false
 
 
-//JS Program to print a fibonacci sequency using recursion.[copied]
-
 //check whether a string is a palindrome in JS.
 function isPalindrome(str) {
     // Convert the string to lowercase and remove non-alphanumeric characters
@@ -1277,3 +1275,49 @@ function isPalindrome(str) {
 console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
 console.log(isPalindrome("racecar")); // Output: true
 console.log(isPalindrome('No')); // Output: false
+
+//sort an array in Js in descending and ascending
+
+const arrSort = ['Msd', 'sachin', 'Virat', 'Smriti', 'Perry', 'Abishek']
+//Ascending order 
+const Ascending = arrSort.slice().sort()
+console.log("Ascending order:", Ascending);
+
+// Descending order [copied]
+const descending = arrSort.slice().sort((a, b) => {
+    if (a < b) return 1; // If a should come after b, return 1
+    if (a > b) return -1; // If a should come before b, return -1
+    return 0; // If a and b are equal, leave them unchanged
+});
+console.log("Descending order:", descending);
+
+
+//Remove all duplicates in the given string.
+const duplicate = ['Msd', 'sachin', 'Virat', 'Smriti', 'Perry', 'Smriti'];
+ 
+const unique = duplicate.filter((item, index) => {
+    
+    return duplicate.indexOf(item) === index;
+});
+console.log(unique);
+
+
+//Js program to check if the given number is a odd or even number.
+let i = 7
+if (i % 2 !== 0) {
+    console.log('The number is Odd')
+} else {
+    console.log('The Number is Even')
+}
+
+
+//Reverse the number.
+const numReverse = [1,2,3,4,5,6,7,8,9,0]
+const Reversed = numReverse.reverse('').join('')
+console.log('Reverse number is:', Reversed)
+
+
+//Count the Number of digit in Js.
+const digit = ['1234567890']
+const counted = digit.toString().length
+console.log(counted)
