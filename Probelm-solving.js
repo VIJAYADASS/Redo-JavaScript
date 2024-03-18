@@ -1193,3 +1193,48 @@ function calculateSumAndProduct(...array){
     return { sum, product };
 }
 console.log(calculateSumAndProduct(1,2,3,4,5))
+
+
+//Ramdom Question from the basics level
+//Reverse a string
+let stringReverse = 'JavaScript'
+let sr = stringReverse.split('').reverse('').join('')
+console.log(sr)
+
+
+//Swap two numbers with and without using a thrid variable in javascript.
+// Using a third variable
+let a = 5; B = 10;  x = 5; y = 10;
+let temp = a;
+a = B;
+B = temp;
+
+console.log("After swapping with a third variable:",
+ "a =", a,"b =", B );
+
+//Without Using a third variable
+x = x + y;
+y = x - y;
+x = x - y;
+
+console.log("After swapping without a third variable:",
+"x =", x, "y =", y);
+
+
+//JS Program to check if a vowel is present in a string.
+function vowelpresent(str){
+    str = str.toLowerCase();
+
+    const vowel = ['a', 'e', 'i', 'o', 'u'];
+
+    for (let i = 0; i < str.length; i++) {
+         
+        if(vowel.includes(str[i])){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(vowelpresent('Hello'))
+console.log(vowelpresent('abcde'))
+console.log(vowelpresent('xyz'))
