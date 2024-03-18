@@ -1238,3 +1238,42 @@ function vowelpresent(str){
 console.log(vowelpresent('Hello'))
 console.log(vowelpresent('abcde'))
 console.log(vowelpresent('xyz'))
+
+
+//JS Program to check if the given number is prime number. [copied]
+function isPrime(number) {
+     
+    if (number < 2) {
+        return false;  
+    }
+    // Iterate through numbers from 2 to the square root of the given number
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        // Check if the number is divisible by any number other than 1 and itself
+        if (number % i === 0) {
+            return false; // If divisible, it's not prime
+        }
+    }
+    return true; // If not divisible by any number other than 1 and itself, it's prime
+}
+
+// Test the function
+console.log(isPrime(5)); // Output: true
+console.log(isPrime(12)); // Output: false
+console.log(isPrime(1)); // Output: false
+
+
+//JS Program to print a fibonacci sequency using recursion.[copied]
+
+//check whether a string is a palindrome in JS.
+function isPalindrome(str) {
+    // Convert the string to lowercase and remove non-alphanumeric characters
+    const formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    // Check if the formatted string is equal to its reverse
+    return formattedStr === formattedStr.split('').reverse().join('');
+}
+
+// Test the function with some examples
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome('No')); // Output: false
