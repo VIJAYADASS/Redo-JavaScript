@@ -1365,3 +1365,15 @@ const char = 'w';
 
 const firstOccurrance = str.indexOf(char)
 console.log(firstOccurrance)
+
+
+// Task: Create an HTML button with the text "Click me". Add an event listener to this button so that when it is clicked, it changes its background color randomly. Additionally, log a message to the console each time the button is clicked, displaying the new background color.
+
+let user = document.querySelector('.myButton');
+user.addEventListener('click', function() {
+   
+    let randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+     
+    user.style.backgroundColor = randomColor;
+    console.log(`Button clicked! New background color: ${randomColor}`);
+});
