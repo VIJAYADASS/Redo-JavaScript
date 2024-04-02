@@ -1400,7 +1400,7 @@ data.then(success => {
 })
 
 
-// Task: Create a function named `fetchUserData` that simulates fetching user data from an API. This function should return a Promise that resolves with mock user data after a short delay. Use `setTimeout` to simulate an asynchronous operation.
+// Task 01: Create a function named `fetchUserData` that simulates fetching user data from an API. This function should return a Promise that resolves with mock user data after a short delay. Use `setTimeout` to simulate an asynchronous operation.
 // 1. Define the `fetchUserData` function.
 // 2. Inside `fetchUserData`, create a Promise using the `Promise` constructor.
 // 3. Inside the Promise executor function, use `setTimeout` to simulate a delay.
@@ -1434,3 +1434,40 @@ fetchUserData
     .finally(() => {
     console.log('User data fetching completed')
     })
+
+
+// Task 02: Create a function named fetchUserPosts that simulates fetching posts associated with a user from an API. This function should take a user ID as a parameter and return a Promise that resolves with mock post data after a short delay. Use setTimeout to simulate an asynchronous operation.
+// Define the fetchUserPosts function that takes a user ID as a parameter.
+// Inside fetchUserPosts, create a Promise using the Promise constructor.
+// Inside the Promise executor function, use setTimeout to simulate a delay.
+// After the delay, resolve the Promise with mock post data associated with the provided user ID.
+// Handle any errors by rejecting the Promise if necessary.
+// Call the fetchUserPosts function with a user ID and attach .then() and .catch() methods to handle the resolved value or any errors.
+// Inside the .then() method, log the user posts.
+// Inside the .catch() method, log any errors.
+
+function fetchUserPosts(userId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const posts = [
+                { userId: userId, id: 1, title: 'Post 1', body: 'Body of Post 1' },
+                { userId: userId, id: 2, title: 'Post 2', body: 'Body of Post 2' },
+                { userId: userId, id: 3, title: 'Post 3', body: 'Body of Post 3' }
+            ];
+    
+            if (posts.length > 0) {
+                resolve(posts);   
+            } else {
+                reject(new Error('No posts found for the user'));  
+            }
+        },  3000);
+    })
+
+}
+fetchUserPosts(1)  
+    .then(posts => {
+        console.log('User posts:', posts);  
+    })
+    .catch(error => {
+        console.error('Error fetching user posts:', error.id);  
+    });
