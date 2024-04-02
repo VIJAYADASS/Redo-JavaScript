@@ -23,7 +23,7 @@ function functionScopeExample() {
 }
 
 functionScopeExample();
-console.log(localVar); // localVar is not defined
+console.log(globalVar); // localVar is not defined
 
 
 // Block Scope:
@@ -1377,3 +1377,60 @@ user.addEventListener('click', function() {
     user.style.backgroundColor = randomColor;
     console.log(`Button clicked! New background color: ${randomColor}`);
 });
+
+
+//Promises
+const data = new Promise((resolve, reject) =>{
+    setTimeout(() => {
+       const result = null
+       if (result) {
+        resolve(result)
+       } else {
+        reject(new Error('No data'));
+       }
+    },  3000);
+})
+
+data.then(success => {
+    console.log( success)
+}).catch(error => {
+    console.log(error)
+}).finally(() => {
+    console.log('Code Completed')
+})
+
+
+// Task: Create a function named `fetchUserData` that simulates fetching user data from an API. This function should return a Promise that resolves with mock user data after a short delay. Use `setTimeout` to simulate an asynchronous operation.
+// 1. Define the `fetchUserData` function.
+// 2. Inside `fetchUserData`, create a Promise using the `Promise` constructor.
+// 3. Inside the Promise executor function, use `setTimeout` to simulate a delay.
+// 4. After the delay, resolve the Promise with mock user data (e.g., an object with `name`, `email`, etc.).
+// 5. Handle any errors by rejecting the Promise if necessary.
+// 6. Call the `fetchUserData` function and attach `.then()` and `.catch()` methods to handle the resolved value or any errors.
+// 7. Inside the `.then()` method, log the user data.
+// 8. Inside the `.catch()` method, log any errors.
+ 
+const fetchUserData = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const obj = {
+            name : ' Mahi',
+            email : 'mahi007@gmail.com',
+            userid : 1
+        }
+        if (obj) {
+            resolve(obj)
+        } else {
+            reject(new Promise('No data there!'))
+        }
+    }, 2000);
+})
+fetchUserData
+    .then(id => {
+        console.log(id)
+    })
+    .catch(error => {
+    console.log( error)
+    })
+    .finally(() => {
+    console.log('User data fetching completed')
+    })
