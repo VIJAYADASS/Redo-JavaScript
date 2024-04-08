@@ -357,7 +357,7 @@ for (let  i = 0;  i < array.length;  i++) {
 
 //Use a while loop to find the first even number greater than 10 in an array of numbers.
 
- 
+
 let numbers = [5, 8, 12, 15, 18, 20];
 let i = 0;
 
@@ -1471,3 +1471,27 @@ fetchUserPosts(1)
     .catch(error => {
         console.error('Error fetching user posts:', error.id);  
     });
+
+
+//Async-await
+//Task: Create an asynchronous function that simulates fetching user data from an API. The function should return a promise that resolves with the fetched user data after a short delay.
+
+    const fetchUserdata = async () => {
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    const userData = {
+      id: 1,
+      name: 'John Doe',
+      email: 'john@example.com'
+    };
+    return userData;
+  };
+  
+fetchUserdata()
+    .then(userData => {
+      console.log('Fetched User Data:', userData);
+    })
+    .catch(error => {
+      console.error('Error Fetching User Data:', error);
+    });
+   
